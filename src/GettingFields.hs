@@ -1,6 +1,6 @@
 
 foo :: Integer -> Integer -> [Integer]
-foo t q= map bar [1..q-1]
+foo t q= filter (>0) $ map bar [1..q-1]
   where
     bar= \z -> if z^t `mod` q == q-1 then z else -1
 
